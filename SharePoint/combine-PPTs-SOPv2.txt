@@ -1,0 +1,32 @@
+Download and open the first OCR
+Right click on the desktop and create a new folder name 'joiner' (no quotes)
+Dowload the rest of the OCRs into the "joiner" folder
+Open created PowerPoint (notice that there are no slides in presentation
+Press Alt+f11
+Click on "Insert" from the top drop menu and then click "Module"
+
+Copy and paste the text below into the module
+
+
+Sub joiner()
+Dim sFileTyp As String
+Dim sFileName As String
+Dim otarget As Presentation
+Dim i As Integer
+On Error GoTo errhandler
+sFileTyp = "*.PPT*"
+sFileName = Dir$(Environ("USERPROFILE") & "\Desktop\joiner\" & sFileTyp)
+Set otarget = ActivePresentation
+Do While sFileName <> ""
+Call otarget.Slides.InsertFromFile(Environ("USERPROFILE") & "\Desktop\joiner\" & sFileName, otarget.Slides.Count)
+sFileName = Dir()
+Loop
+Exit Sub
+errhandler:
+MsgBox "Sorry, there was an error"
+End Sub
+
+
+
+Click on the green play "arrow" button
+Once combination is complete, "Save As..." the presentation to the desired folder.  

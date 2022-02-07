@@ -1,0 +1,14 @@
+<script>
+function openDialog(pageUrl) {
+var options = {
+url: pageUrl,
+title: 'Add a new item',
+allowMaximize: false,
+showClose: true,
+width: 550,
+height: 1000
+};
+SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', options);
+}
+</script>
+<input type="button" value="Add a new item" style="width:150px; height: 35px; 30px;background:#41B6A3; color:white;font-size:small; font-weight:normal;  cursor: pointer;"<a href="#" onclick="openDialog('https://private.navyreserve.navy.mil/rcc/NRNW/N01A/Lists/CY21CorrespondenceTracker1/Item/newifs.aspx');"</a>

@@ -1,0 +1,18 @@
+<input type="button" style="width:200px; height: 35px; 30px;background:green; color:white;font-size:small; font-weight:normal;  cursor: pointer;"onclick="window.location.href='https://private.navyreserve.navy.mil/rcc/NRNW/N35/_vti_bin/owssvr.dll?CS=109&Using=_layouts/query.iqy&List={990EAB66-CCA2-4FFD-8884-D00A6C861018}&View={97B7EBB3-9E8B-44F5-8D39-E9C1EAFA7F7B}&CacheControl=1';" value ="Export Mob Tacker to Excel"/>
+
+<script>
+function openDialog(pageUrl) {
+var options = {
+url: pageUrl,
+title: 'Add a new item',
+allowMaximize: false,
+showClose: true,
+width: 1000,
+height: 1000
+};
+SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', options);
+}
+</script>
+<input type="button" value="Add a new item" style="width:150px; height: 35px; 30px;background:blue; color:white;font-size:small; font-weight:normal;  cursor: pointer;"<a href="#" onclick="openDialog('https://private.navyreserve.navy.mil/rcc/NRNW/N35/Lists/MobilizationTracker/Item/newifs.aspx');"</a>
+
+<input type="button" style="width:150px; height: 35px; 30px;background:orange; color:white;font-size:small; font-weight:normal;  cursor: pointer;"onclick="window.location.href='/rcc/NRNW/N35/Pages/LACMOB-Dropbox.aspx';" value ="LACMOB Dropbox"/>
