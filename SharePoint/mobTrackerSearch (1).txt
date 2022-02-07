@@ -1,0 +1,32 @@
+<script type="text/javascript">
+ 
+    function RedirectUrl() {
+        var tb = document.getElementById("tbSearch").value;
+        var cs = document.getElementById("sfield").value;
+        var url = "";
+ 
+        if (tb != "") {
+            if (cs == "LAST_x0020_NAME" || cs == "Title" || cs == "MOB_x0020_LOCATION" || cs == "NOSC") {
+                url = "FilterField1=" + cs + "&FilterValue1=" + tb;
+                window.location.href = "MOB-Tracker.aspx?View={14775786-D49E-4E90-A181-7D9D61F0C8C1}&" + url;
+            }
+            else {
+                url = "FilterName=" + cs + "&FilterMultiValue=*" + tb + "*";
+                window.location.href = "MOB-Tracker.aspx?View={14775786-D49E-4E90-A181-7D9D61F0C8C1}&" + url;
+            }
+        }
+        else {
+            return false;
+        }
+    }
+    function ClearUrl() {
+        window.location.href = "MOB-Tracker.aspx";
+    }
+        </script>Search Field: <select id="sfield">
+         <option value="LAST_x0020_NAME">LAST NAME</option>
+         <option value="Title">MOB Mission</option>
+         <option value="MOB_x0020_LOCATION">MOB Location</option>
+         <option value="NOSC">NRC</option>        
+         </select>   Search text: <input id="tbSearch" type="text"/>
+         <input id="btnSearch" onclick="return RedirectUrl();" type="button" value="Search"/>
+         <input id="btnClear" onclick="return ClearUrl();" type="button" value="Clear"/>
