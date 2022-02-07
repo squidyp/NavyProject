@@ -1,0 +1,19 @@
+<style>
+
+.ms-vhltr th{
+    position: sticky;
+    top: 0;
+    background: #41B6A3;
+    color: #fff; 
+    
+}
+.ms-vhltr th:link{
+ 	color: #fff; 
+    
+}
+.ms-vhltr th:visited{
+ 	color: #fff; 
+    
+}
+
+</style>
